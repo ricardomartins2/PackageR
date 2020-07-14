@@ -1,5 +1,5 @@
 ---
-title: "package_details"
+title: "Details of the PackageR Package"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{package_details}
@@ -7,40 +7,64 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
 
-```{r, setup, include = FALSE} 
+# Description
+
+`PackageR` package reads and plots Fatality Analysis Reporting System (FARS) data 
+from the [National Highway Traffic Safety 
+Administration](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars).
+
+[FARS](https://en.wikipedia.org/wiki/Fatality_Analysis_Reporting_System) is a
+nationwide census, providing the American public yearly data, regarding fatal
+injuries suffered in motor vehicle traffic crashes.
+
+
+## Load Packages
+
+```{r, echo = FALSE, include = FALSE}
 library(PackageR)
-```
-This package was prepared as an excercise for Coursera's "Building an R Package" course.
-It contains several functions for interacting with Fatality Analysis Reporting System (FARS) data.
-
-## Create File Name and Read Data
-```{r, readwrite}
-filename <- make_filename("2013")
-data <- fars_read(filename)
+library(dplyr)
+library(maps)
 ```
 
+## Package functions
 
-## Read data for a list of years - Store in List of data frames
-```{r, read_years}
-years <- fars_read_years(2013)
-head(years)
+There are three exported functions available to users:
+
+- `fars_read()`
+- `fars_summarize_years()`
+- `fars_map_state()`
+
+Further we give a short description with examples how to use the functions. For the purposes of these examples we will use data from FARS, years 2013-2015, that can be found in the package directory under `\extdata` folder.
+
+## Read FARS data files
+
+The function `fars_read()` provides a way how to read data from a file path provided as an argument. It returns a `tibble` with loaded data:
+
+```{r fars_read_example}
+filename <- system.file("extdata/accident_2013.csv.bz2", package = "PackageR")
+fars_read(filename)
 ```
 
-## Summarize Years of Data
+## Summarize number of accidents
 
-```{r, summarize}
-fars_summarize_years(2013)
+The next function `fars_summarize_years()` takes a vector or list of years (numeric/integer values) as an argument and if the corresponding files with data are available, it returns a pivot table with number of accidents per year and month. The data files need to be located in the working directory.
+
+```{r fars_summarize_years_example}
+setwd(system.file("extdata", package = "PackageR"))
+fars_summarize_years(2013:2015)
 ```
 
-## Map State Data for a chosen Year
-```{r, map}
-## Georgia, 2013
-fars_map_state(13,2013)
+## Plot accident locations
+
+The last function available in the package, `fars_map_state()` takes a state index and year as arguments and returns a plot of the state with accident locations. The state indices need to correspond available indeces from the data set. Here are some examples:
+
+```{r fars_map_state_example}
+setwd(system.file("extdata", package = "PackageR"))
+fars_map_state(45, 2015)
 ```
+
+# Links:
+* [Package PackageR GitHub](https://github.com/ricardomartins2/PackageR)
+* [Package PackageR Travis CI](https://travis-ci.org/ricardomartins2/PackageR)
+

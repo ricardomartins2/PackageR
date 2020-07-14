@@ -49,7 +49,6 @@ make_filename <- function(year) {
         sprintf("accident_%d.csv.bz2", year)
 }
 
-
 #' Reads month and year from accident files
 #'
 #' @description
