@@ -1,5 +1,6 @@
 #' Loads a CSV file
 #'
+#'
 #' @description
 #' The function loads a CSV file defined by \code{filename} argument and returns
 #' a tibble. If the path is incorrect the function will end with an error.
