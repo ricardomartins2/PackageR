@@ -12,5 +12,4 @@ LazyData: true
 RoxygenNote: 7.1.0
 Suggests: 
     knitr,tidyr, rmarkdown, testthat, dplyr, maps, readr, xfun, mime, glue, magrittr, stringi, evaluate, highr, markdown, stringr, yaml, digest, base64enc, rlang, assertthat, crayon, fansi, cli, desc, pkgbuild, rprojroot, rstudioapi, withr, R6, callr, prettyunits, backports, processx, ps, ellipsis, lifecycle, pillar, pkgconfig, vctrs, utf8, purrr, htmltools, jsonlite, tinytex, pkgload, praise, generics, tibble, tidyselect, Rcpp, hms, clipr, BH
-
 VignetteBuilder: knitr
