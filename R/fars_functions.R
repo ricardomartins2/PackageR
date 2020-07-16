@@ -32,7 +32,7 @@ fars_read <- function(filename) {
 #' Creates a filename
 #'
 #' @description
-#' The function creates a filename for a .csv.bz2 file based on the year
+#' The function creates a filename for a .csv.bz2 file based on the \code{year}
 #' argument in a form "accident_<year>.csv.bz2". It requires a numerical or
 #' integer input otherwise ends with an error.
 #'
@@ -43,7 +43,7 @@ fars_read <- function(filename) {
 #'
 #' @examples
 #' \dontrun{
-#' makefilename(2015)
+#' makefilename(2016)
 #' }
 make_filename <- function(year) {
         year <- as.integer(year)
@@ -69,7 +69,7 @@ make_filename <- function(year) {
 #' fars_read_years(list(2013, 2014))
 #'
 #' # Results in a warning
-#' fars_read_years(2015)
+#' fars_read_years(2016)
 #' }
 #'
 #' @importFrom dplyr %>% mutate select
@@ -104,7 +104,7 @@ fars_read_years <- function(years) {
 #'
 #' @examples
 #' \dontrun{
-#' fars_summarize_years(2013:2015)
+#' fars_summarize_years(2013:2016)
 #' }
 #'
 #' @importFrom dplyr %>% bind_rows group_by summarize
@@ -136,7 +136,7 @@ fars_summarize_years <- function(years) {
 #'
 #' @examples
 #' \dontrun{
-#' fars_map_state(45, 2013)
+#' fars_map_state(45, 2015)
 #'
 #' # Results in an error
 #' fars_map_state(45, 2016)

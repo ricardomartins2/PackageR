@@ -2,8 +2,8 @@ Package: PackageR
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
+Author: Ricardo Martins da Silva
+Maintainer: The package maintainer <capricardoeb@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: What license is it under?
@@ -13,5 +13,6 @@ RoxygenNote: 7.1.0
 Suggests: 
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    dplyr
 VignetteBuilder: knitr

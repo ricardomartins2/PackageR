@@ -1,5 +1,3 @@
-context("Test the basic functionality of the package")
-
 library(dplyr)
 library(maps)
 

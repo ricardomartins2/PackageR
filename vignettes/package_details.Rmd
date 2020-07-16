@@ -38,7 +38,6 @@ There are three exported functions available to users:
 Further we give a short description with examples how to use the functions. For the purposes of these examples we will use data from FARS, years 2013-2015, that can be found in the package directory under `\extdata` folder.
 
 ## Read FARS data files
-
 The function `fars_read()` provides a way how to read data from a file path provided as an argument. It returns a `tibble` with loaded data:
 
 ```{r fars_read_example}
@@ -63,6 +62,10 @@ The last function available in the package, `fars_map_state()` takes a state ind
 setwd(system.file("extdata", package = "PackageR"))
 fars_map_state(45, 2015)
 ```
+
+
+
+
 
 # Links:
 * [Package PackageR GitHub](https://github.com/ricardomartins2/PackageR)
