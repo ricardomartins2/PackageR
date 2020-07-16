@@ -25,7 +25,7 @@ returns an error if the data file for the year input does not exist.
 }
 \examples{
 \dontrun{
-fars_map_state(45, 2013)
+fars_map_state(45, 2015)
 
 # Results in an error
 fars_map_state(45, 2016)

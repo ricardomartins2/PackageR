@@ -25,7 +25,7 @@ fars_read_years(2013:2015)
 fars_read_years(list(2013, 2014))
 
 # Results in a warning
-fars_read_years(2015)
+fars_read_years(2016)
 }
 
 }

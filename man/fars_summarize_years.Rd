@@ -23,7 +23,7 @@ directory, the years can be passed as a list or a vector.
 }
 \examples{
 \dontrun{
-fars_summarize_years(2013:2015)
+fars_summarize_years(2013:2016)
 }
 
 }

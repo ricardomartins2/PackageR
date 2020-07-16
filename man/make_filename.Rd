@@ -14,12 +14,12 @@ Returns a character string in a format "accident_<year>.csv.bz2" that
 can be used as a file name
 }
 \description{
-The function creates a filename for a .csv.bz2 file based on the year
+The function creates a filename for a .csv.bz2 file based on the \code{year}
 argument in a form "accident_<year>.csv.bz2". It requires a numerical or
 integer input otherwise ends with an error.
 }
 \examples{
 \dontrun{
-makefilename(2015)
+makefilename(2016)
 }
 }

@@ -15,5 +15,6 @@ Suggests:
     rmarkdown,
     testthat,
     dplyr,
-    maps
+    maps,
+    readr
 VignetteBuilder: knitr
